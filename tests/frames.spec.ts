@@ -1,5 +1,8 @@
 import {test,expect,Locator,Frame,FrameLocator} from '@playwright/test';
-
+//page.frame---accept name or url
+//     -childFrames()
+//page.frames---total frmaes 
+//page.frameLocator--accept all locators
 test('frames handling-using page.fram() ',async ({page})=>{
 await page.goto("https://ui.vision/demo/webtest/frames/");
 //find total number of frames present on a page.
