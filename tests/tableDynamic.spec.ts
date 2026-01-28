@@ -9,7 +9,9 @@ const table:Locator=page.locator('table.table');
 await expect(table).toBeVisible();
 //check CPU time column for particular row  locator('table.table').locator('tbody>tr').first()
 //page.locator('table.table>tbody>tr')   locator('table.table').locator('tbody>tr').nth(1)
-const rows:Locator=table.locator('tbody>tr'); //get all rows first then loop thru them to fetch a particular row based on match value
+
+//get all rows first then loop thru them to fetch a particular row based on match value
+const rows:Locator=table.locator('tbody>tr'); 
 const rowCount:number=await rows.count();
 console.log("rows total count  :: ",rowCount)
 for(let row of await rows.all()){

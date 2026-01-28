@@ -183,7 +183,8 @@ test('select-verify displayed dropdown options are sorted',async({page})=>{
 
     //extract all options text into an array
     //use spread opertor to make original array copy for comparison
-    const actualOptions:string[]=(await animalOptions.allTextContents()).map(opt=>opt.trim());
+    const actualOptions:string[]=(await animalOptions.allTextContents())
+                                        .map(opt=>opt.trim());
     const expectedOptions:string[]=[...actualOptions] //create a copy of actual options array
     const sortedOptions= [...actualOptions].sort(); //sort a copy of actual options array
     console.log("Expected sorted options are:",sortedOptions)
